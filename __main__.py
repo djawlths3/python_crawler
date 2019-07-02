@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 from itertools import count
@@ -53,7 +54,7 @@ def crawling_nene():
             t = (tags_shopname.text, tags_shopadd.text)
             results.append(t)
     table = pd.DataFrame(results, columns=['name', 'address'])
-    table.to_csv('__results__/nene.csv', encoding='utf-8', mode='w', index=True)
+    table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
 
 
 
